@@ -5,13 +5,14 @@
   text-decoration: none;
   list-style: none;
 }
+
 .container {
   font-family: Arial, sans-serif;
   background: #E5E5E5;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   padding: 0 15px;
 }
 .wells {
@@ -216,48 +217,6 @@
 
 /* Адаптив */
 @media (max-width: 1024px){
-  .well__title {
-    font-size: clamp(14px, 1.5vw, 16px);
-  }
-  .well__advantage-text {
-    font-size: clamp(13px, 1.3vw, 15px);
-  }
-  .well__price-value {
-    font-size: clamp(14px, 1.7vw, 20px);
-  }
-  .well__price-type,
-  .well__price-unit {
-    font-size: clamp(14px, 1.2vw, 15px);
-  }
-  .well__button {
-    width: clamp(222px, 1.1vw, 250px);
-    font-size: clamp(16px, 1.6vw, 18px);
-    padding: clamp(10px, 1vw, 12px) clamp(10px, 1vw, 12px) clamp(11px, 1vw, 13px) clamp(11px, 1vw, 13px);
-  }
-  .well__content {
-    padding: clamp(14px, 1.2vw, 17px) clamp(10px, 1vw, 13px) clamp(14px, 1.2vw, 17px) clamp(12px, 1vw, 16px);
-  }
-  .well__advantages {
-    gap: clamp(8px, 1vw, 10px);
-  }
-  .well__advantage {
-    gap: clamp(10px, 1vw, 12px);
-  }
-  .well__price {
-    gap: clamp(12px, 1vw, 14px);
-  }
-  .well__price-item {
-    gap: clamp(3px, 0.5vw, 4px);
-  }
-  .well__depths {
-    padding-top: clamp(10px, 1vw, 12px);
-  }
-  .well__depth-text{
-    font-size: clamp(14px, 1.5vw, 16px);
-  }
-  .well__depths .column {
-    gap: clamp(6px, 0.8vw, 8px);
-  }
   .well__advantage-text {
     width: auto;
   }
@@ -269,15 +228,12 @@
   }
 }
 
-@media (max-width: 768px) {
-  .container {
-    align-items: start;
-    padding: 0;
-  }
+@media (max-width: 960px) {
   .wells {
     flex-direction: column;
     aspect-ratio: auto;
     height: auto;
+    width: auto;
   }
   .wells__item {
     flex: 1;
@@ -326,7 +282,14 @@
     padding: 10px 10px 11px 11px;
   }
 }
-
+@media (max-width: 480px) {
+  .container {
+    padding: 0;
+  }
+  .wells {
+     width: 100%;
+  }
+}
 @media (min-width: 769px) {
   .wells__item:nth-child(1) { flex: 281; }
   .wells__item:nth-child(2) { flex: 320; }
