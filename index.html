@@ -1,13 +1,141 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <title>Wells</title>
+</head>
+<body>
+<div class="container">
+  <section class="wells">
+    <div class="wells__item well">
+      <h3 class="well__title">Скважина на песок</h3>
+      <div class="well__content">
+        <ul class="well__advantages">
+          <li class="well__advantage">
+            <span class="well__advantage-text">Бюджетная стоимость</span>
+          </li>
+          <li class="well__advantage">
+            <span class="well__advantage-text">Простота и быстрое изготовление</span>
+          </li>
+        </ul>
+
+        <div class="well__price">
+          <div class="well__price-item well__price-item_big-gap">
+            <span class="well__price-type">Скважина на песок:</span>
+            <div class="well__price-info">
+              <span class="well__price-value">2 500</span>
+              <span class="well__price-unit">руб/метр</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="well__depths-wrapper">
+          <div class="well__depths">
+            <ul class="column">
+              <li class="well__depth-item"><a href="#" class="well__depth-link"><span class="well__depth-text">10 метров</span></a></li>
+              <li class="well__depth-item"><a href="#" class="well__depth-link"><span class="well__depth-text">15 метров</span></a></li>
+              <li class="well__depth-item"><a href="#" class="well__depth-link"><span class="well__depth-text">20 метров</span></a></li>
+            </ul>
+            <ul class="column">
+              <li class="well__depth-item"><a href="#" class="well__depth-link"><span class="well__depth-text">25 метров</span></a></li>
+              <li class="well__depth-item"><a href="#" class="well__depth-link"><span class="well__depth-text">30 метров</span></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <a href="#" class="well__button">Посмотреть все глубины</a>
+      </div>
+    </div>
+
+    <div class="wells__item well">
+      <h3 class="well__title">Артезианская скважина</h3>
+      <div class="well__content">
+        <ul class="well__advantages">
+          <li class="well__advantage">
+            <span class="well__advantage-text">Большой дебит скважины</span>
+          </li>
+          <li class="well__advantage">
+            <span class="well__advantage-text">Длительный срок эксплуатации</span>
+          </li>
+        </ul>
+
+        <div class="well__price">
+          <div class="well__price-item">
+            <span class="well__price-type">Артезианская скважина:</span>
+            <div class="well__price-info">
+              <span class="well__price-value">2 000</span>
+              <span class="well__price-unit">руб/метр</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="well__depths-wrapper">
+          <div class="well__depths">
+            <ul class="column">
+              <li class="well__depth-item"><a href="#" class="well__depth-link"><span class="well__depth-text">50 метров</span></a></li>
+              <li class="well__depth-item"><a href="#" class="well__depth-link"><span class="well__depth-text">70 метров</span></a></li>
+            </ul>
+            <ul class="column">
+              <li class="well__depth-item"><a href="#" class="well__depth-link"><span class="well__depth-text">120 метров</span></a></li>
+              <li class="well__depth-item"><a href="#" class="well__depth-link"><span class="well__depth-text">150 метров</span></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <a href="#" class="well__button">Посмотреть все глубины</a>
+      </div>
+    </div>
+
+    <div class="wells__item well">
+      <h3 class="well__title">Скважина МГБУ</h3>
+      <div class="well__content">
+        <ul class="well__advantages">
+          <li class="well__advantage">
+            <span class="well__advantage-text">Возможность бурения в труднодоступных местах</span>
+          </li>
+        </ul>
+
+        <div class="well__price">
+          <div class="well__price-item">
+            <span class="well__price-type">Артезианская скважина МГБУ:</span>
+            <div class="well__price-info">
+              <span class="well__price-value">2 800</span>
+              <span class="well__price-unit">руб/метр</span>
+            </div>
+          </div>
+          <div class="well__price-item">
+            <span class="well__price-type">Скважина на песок МГБУ:</span>
+            <div class="well__price-info">
+              <span class="well__price-value">3 000</span>
+              <span class="well__price-unit">руб/метр</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="well__depths-wrapper">
+          <div class="well__depths">
+            <ul class="column">
+              <li class="well__depth-item"><a href="#" class="well__depth-link"><span class="well__depth-text">10 метров</span></a></li>
+              <li class="well__depth-item"><a href="#" class="well__depth-link"><span class="well__depth-text">30 метров</span></a></li>
+              <li class="well__depth-item"><a href="#" class="well__depth-link"><span class="well__depth-text">50 метров</span></a></li>
+            </ul>
+            <ul class="column">
+              <li class="well__depth-item"><a href="#" class="well__depth-link"><span class="well__depth-text">100 метров</span></a></li>
+              <li class="well__depth-item"><a href="#" class="well__depth-link"><span class="well__depth-text">120 метров</span></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <a href="#" class="well__button">Посмотреть все глубины</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script type="module" src="/src/main.js"></script>
+</body>
 </html>

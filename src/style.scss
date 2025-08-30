@@ -1,0 +1,334 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+.container {
+  font-family: Arial, sans-serif;
+  background: #E5E5E5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 15px;
+}
+.wells {
+  display: flex;
+  max-width: 928px;
+  width: 100%;
+  aspect-ratio: 928/452;
+  height: auto;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border: 1px solid #0D274D;
+  border-right: none;
+  flex-wrap: wrap;
+}
+.wells__item {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.well__title {
+  background-color: #0D274D;
+  width: 100%;
+  padding: 15px 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+
+  &:last-child {
+    border-right: none;
+  }
+}
+.well__content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid #0D274D;
+  padding: 17px 13px 17px 16px;
+}
+.well__advantages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.well__advantage {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 17px;
+    height: 14px;
+    flex-shrink: 0;
+    background: url('/public/icons/check.svg') no-repeat center;
+    background-size: contain;
+  }
+}
+.well__advantage-text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 21px;
+  width: 224px;
+}
+.wells__item:nth-child(2),
+.wells__item:nth-child(3) {
+  .well__advantages .well__advantage-text {
+    width: 237px;
+  }
+}
+.well__price {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.well__price-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.well__price-item_big-gap{
+  gap: 8px;
+}
+.well__price-type {
+  font-weight: 700;
+  font-size: 15px;
+  color: #282828;
+}
+.well__price-value {
+  font-weight: 900;
+  font-size: 20px;
+  color: #0e9a0b;
+}
+.well__price-unit {
+  font-weight: 400;
+  font-size: 14px;
+  color: #282828;
+}
+.well__depths {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12px;
+}
+.well__depths-wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+    width: 238px;
+    height: 1px;
+    background-color: #00BCEB;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.well__depths .column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.well__depth-link {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 10px;
+  color: #282828;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    .well__depth-text{
+      color: #00BBEA;
+      text-decoration: none;
+    }
+  }
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 15px;
+    position: absolute;
+    fill: #00BCEB;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url("/public/icons/triangle.svg") no-repeat center;
+    background-size: contain;
+  }
+
+  &:hover {
+    color: #00BBEA;
+    text-decoration: none;
+  }
+
+}
+.well__depth-text{
+  font-weight: 400;
+  font-size: 16px;
+  color: #282828;
+  text-decoration: underline;
+  white-space: nowrap;
+  margin-left: 15px;
+
+}
+.well__button {
+  display: block;
+  width: 250px;
+  align-self: center;
+  background: #00BCEB;
+  padding: 12px 12px 13px 13px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  font-weight: 700;
+  font-size: 18px;
+  color: #FFFFFF;
+  white-space: nowrap;
+  text-align: center;
+
+  &:hover {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+}
+
+/* Адаптив */
+@media (max-width: 1024px){
+  .well__title {
+    font-size: clamp(14px, 1.5vw, 16px);
+  }
+  .well__advantage-text {
+    font-size: clamp(13px, 1.3vw, 15px);
+  }
+  .well__price-value {
+    font-size: clamp(14px, 1.7vw, 20px);
+  }
+  .well__price-type,
+  .well__price-unit {
+    font-size: clamp(14px, 1.2vw, 15px);
+  }
+  .well__button {
+    width: clamp(222px, 1.1vw, 250px);
+    font-size: clamp(16px, 1.6vw, 18px);
+    padding: clamp(10px, 1vw, 12px) clamp(10px, 1vw, 12px) clamp(11px, 1vw, 13px) clamp(11px, 1vw, 13px);
+  }
+  .well__content {
+    padding: clamp(14px, 1.2vw, 17px) clamp(10px, 1vw, 13px) clamp(14px, 1.2vw, 17px) clamp(12px, 1vw, 16px);
+  }
+  .well__advantages {
+    gap: clamp(8px, 1vw, 10px);
+  }
+  .well__advantage {
+    gap: clamp(10px, 1vw, 12px);
+  }
+  .well__price {
+    gap: clamp(12px, 1vw, 14px);
+  }
+  .well__price-item {
+    gap: clamp(3px, 0.5vw, 4px);
+  }
+  .well__depths {
+    padding-top: clamp(10px, 1vw, 12px);
+  }
+  .well__depth-text{
+    font-size: clamp(14px, 1.5vw, 16px);
+  }
+  .well__depths .column {
+    gap: clamp(6px, 0.8vw, 8px);
+  }
+  .well__advantage-text {
+    width: auto;
+  }
+  .wells__item:nth-child(2),
+  .wells__item:nth-child(3) {
+    .well__advantages .well__advantage-text {
+      width: auto;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    align-items: start;
+    padding: 0;
+  }
+  .wells {
+    flex-direction: column;
+    aspect-ratio: auto;
+    height: auto;
+  }
+  .wells__item {
+    flex: 1;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #0D274D;
+  }
+  .well__content{
+    gap: 20px;
+  }
+  .wells__item:last-child {
+    border-bottom: none;
+  }
+  .well__advantage-text {
+    width: 100%;
+  }
+  .well__title {
+    border-right: none;
+  }
+  .well__content {
+    padding: 20px;
+  }
+  .well__advantages {
+    gap: 8px;
+  }
+  .well__advantage {
+    gap: 10px;
+  }
+  .well__price {
+    gap: 12px;
+  }
+  .well__price-type, .well__price-unit{
+    font-size: 16px;
+  }
+  .well__price-item {
+    gap: 3px;
+  }
+  .well__depths {
+    padding-top: 10px;
+  }
+  .well__depths .column {
+    gap: 6px;
+  }
+  .well__button {
+    width: 100%;
+    padding: 10px 10px 11px 11px;
+  }
+}
+
+@media (min-width: 769px) {
+  .wells__item:nth-child(1) { flex: 281; }
+  .wells__item:nth-child(2) { flex: 320; }
+  .wells__item:nth-child(3) { flex: 327; }
+}
